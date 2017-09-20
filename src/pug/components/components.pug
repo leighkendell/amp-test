@@ -7,6 +7,6 @@ mixin image-grid(amp, extraClass)
         each val in [1, 2, 3, 4]
             .image-grid-item
                 if(amp)
-                    amp-img(src=`/images/${val}.jpg` width="800" height="600" layout="responsive")
+                    amp-img(src=`../images/${val}.jpg` width="800" height="600" layout="responsive")
                 else
-                    img(src=`/images/${val}.jpg` width="800" height="600")
+                    img(src=`../images/${val}.jpg` width="800" height="600")
