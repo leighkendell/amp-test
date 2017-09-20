@@ -1,0 +1,1 @@
+"use strict";var imageLoader=function(){for(var e=document.querySelectorAll("img"),a=0;a<e.length;a++)e[a].onload=function(){this.parentElement.classList.add("image-loaded")}};imageLoader();

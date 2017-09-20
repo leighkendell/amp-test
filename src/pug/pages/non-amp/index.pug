@@ -1,0 +1,14 @@
+include ../../components/components
+
+doctype html
+html(lang="en")
+    head
+        include ../../includes/meta
+        link(rel="stylesheet" href="../css/styles.css")
+        title Non-AMP Page
+    body
+        +header('This is a normal page')
+        .wrapper
+            +image-grid(false, 'image-grid--non-amp')
+        script
+            include ../../../../build/scripts/app.js

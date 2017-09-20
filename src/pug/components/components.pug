@@ -1,0 +1,12 @@
+mixin header(title)
+    header.page-header
+        h1=title
+
+mixin image-grid(amp, extraClass)
+    div(class=`image-grid ${extraClass}`)
+        each val in [1, 2, 3, 4]
+            .image-grid-item
+                if(amp)
+                    amp-img(src=`/images/${val}.jpg` width="800" height="600" layout="responsive")
+                else
+                    img(src=`/images/${val}.jpg` width="800" height="600")

@@ -1,0 +1,54 @@
+// ==========================================================================
+// Image Grid
+// ==========================================================================
+
+.image-grid {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.image-grid-item {
+    width: 50%;
+
+    .image-grid--non-amp & {
+        position: relative;
+        width: 50%;
+        height: 0;
+        padding-bottom: 37.5%;
+
+        &::before {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: $color-light;
+            content: 'LOADING...';
+            border: 2px dashed lighten($color-default, 70%);
+            z-index: 1;
+        }
+
+        &.image-loaded {
+            &::before {
+                display: none;
+            }
+        }
+    }
+
+    img {
+        display: block;
+
+        .image-grid--non-amp & {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
